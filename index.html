@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Slot Master</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #4a5568;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 24px;
+        }
+
+        .info-card {
+            background: #f7fafc;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .info-card h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .info-card ul {
+            margin-left: 20px;
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .info-card li {
+            margin-bottom: 8px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1a202c;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e1;
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+            margin-top: 8px;
+        }
+
+        .footer a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            📄
+        </div>
+        <h1>
+            我的项目
+        </h1>
+        <div class="subtitle">
+            一个简单的 GitHub Pages 站点<br>
+            用于托管隐私协议及相关文档
+        </div>
+
+        <div class="info-card">
+            <h2>
+                ℹ️ 关于本项目
+            </h2>
+            <p>
+                本项目是一个静态站点，主要用于存放和展示以下内容：
+            </p>
+            <ul>
+                <li>✅ 隐私政策（适配 Facebook 开发者平台）</li>
+                <li>✅ 用户协议（如有需要）</li>
+                <li>✅ 其他公开文档</li>
+            </ul>
+            <p style="margin-top: 12px;">
+                本站点使用 <strong>GitHub Pages</strong> 托管，不主动收集用户个人信息。
+                如需查看详细的数据处理说明，请参阅隐私政策页面。
+            </p>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html" class="btn btn-primary">
+                🔒 隐私政策
+            </a>
+            <a href="privacy-en.html" class="btn btn-secondary">
+                🌐 Privacy Policy (English)
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>
+                生效日期：2026年5月20日<br>
+                托管于 <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                | 联系邮箱：<a href="mailto:yanhux0808@gmail.com">yanhux0808@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
